@@ -34,17 +34,17 @@ class LayoutComponent extends Component {
         if( this.props.tab === 1 ) {
             view = <Products products={this.props.products} handleOnClick={this.handleOnClick} />;
         } else if (this.props.tab === 2){
-            view = <CartView cart={this.props.cart} handleClickRemoveCart={this.handleClickRemoveCart}/>
+            view = <History history={this.props.history} />
         } else if(this.props.tab === 3) {
             view = <Form products={this.props.products} handleClickAddProduct={this.handleClickAddProduct} handleClickRemoveProduct={this.handleClickRemoveProduct} />
         } else if(this.props.tab === 4 ) {
-            view = <History history={this.props.history} />
+            view = <CartView cart={this.props.cart} handleClickRemoveCart={this.handleClickRemoveCart}/>
         }
         
         let cartLength = this.props.cart.length;
         let num;
         if(cartLength === 0) {
-            num = 'no cases picked'
+            num = '';
         } else if(cartLength === 1) {
             num = cartLength + ' case'
         } else {
@@ -52,20 +52,16 @@ class LayoutComponent extends Component {
         }
 		return (
 			<div className="App">
-			<div className="tabheader">
-				<span onClick={this.handleClickProducts}>-- Products -</span>
-				<span onClick={this.handleClickCart}>- Cart -
-                <p className="cartNumber">{num}</p>
-                                                 </span>  
-				<span onClick={this.handleClickForm}>- Form -</span>
-				<span onClick={this.handleClickHistory}>- History --</span>
-				
-				
-			</div>
-			<div className="tabbody">     
-                  {view}
-			</div>
-			
+                <div className="tabheader">
+                    <span onClick={this.handleClickProducts}>Products</span>
+                    <span onClick={this.handleClickHistory}>History</span>
+                    <p className="cartNumber">{num}</p> 
+                    <span onClick={this.handleClickForm}>Form</span>
+                    <span onClick={this.handleClickCart}>Cart</span>  
+                </div>
+                <div className="tabbody">   
+                    {view}
+                </div>
 		  </div>
 		);
 	}
@@ -133,13 +129,13 @@ class LayoutComponent extends Component {
 		this.changeTab(1);
 	}
 	handleClickCart(e) {
-		this.changeTab(2);
+		this.changeTab(4);
 	}
 	handleClickForm(e) {
 		this.changeTab(3);
 	}
 	handleClickHistory(e) {
-		this.changeTab(4);
+		this.changeTab(2);
 	}
     
 	changeTab(tab) {
