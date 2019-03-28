@@ -1,36 +1,46 @@
 .App {
-    width: 100%;
     margin: 0;
     font-family: monospace, Arial, sans-serif;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
 }
-body {
-     background-color: #626359
+
+.btn {
+    margin-top: 30px;
 }
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
 .tabheader {
-    height: 65px;
     background-color: #111111;
+    padding-bottom: 20px;
+    flex: 1;
+    flex-direction: row;
 }
 .tabheader span {
-    font-size: 1.5em;
+    font-size: 20px;
     float: left;
     color: white;
     cursor: pointer;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 100px;
+    margin-top: 20px;
+    padding: 10px
 }
+
 .tabheader span:hover {
     background-color: #706b6b;
-    height: 50px;
-    border-radius: 10px;
 }
 
 .tabbody {
-    height: 100vh;
+    flex: 2;
     padding: 5px;
     border-radius: 2px;
     min-height: 100%;
-   ; 
+    
 }
 
 .list h2, .list p {
@@ -43,82 +53,85 @@ h2 {
 
 .product {
     height: 200px;
-}
-.product img {
-    max-width: 150px;
-    max-height: 150px;
     width: 50%;
-    height: 100%;
-    float: left;
-    
+    justify-content: center;
+    align-items: center;
 }
+
+.product img {
+    margin-left: 5px;
+}
+
 .product span {
     font-weight: bold;
-    margin-left: 4px;
-    font-size: 1.5em;
-    position: absolute;
-    right: 20vw;
 }
-span.productName {margin-top: 6px;}
-span.productPrice {margin-top: 8px;}
-span.productAmount {margin-top: 8px;}
+
+.productListInfo {
+    display: flex;
+    flex-direction: column
+}
+
 .productInfo {
     color: white;
     position: absolute;
-    right: 20vw;
 }
-.list {
-    
-    margin: auto;
-    width: 70vw;
-    height: 70vh;
+.list, .cart { 
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
     margin-top: 0.5em;
+    border: 1px solid lightgray;
+    background-color: darkgrey;
+    padding: 10px;
 }
-ul {
-    padding: 0;
-    list-style-type: none;
+
+.list ul {
+    display: flex;
+    flex-direction: row;
 }
+
 li {
-    background-color: #b5b796;
-    margin-top: 0.5em;
+    list-style: none;
 }
+
 
 .addBtn {
+    padding: 8px;
+    font-size: 20px;    
     background-color: #06a33f;
-    color: white;
-    margin: 0;
-    line-height: normal;
-    display: inline-block;
-    overflow: visible;
-    cursor: pointer;
-    
 }
 
-.cart {
-    border: 1px solid lightgray;
-    width: 70vw;
-    height: 70vh;
-    margin: auto;
-}
 .cart h2, .cart h4 {
     color: white;
-    font-size: 2em;
+    font-size: 1em;
     text-align: center;
 }
 .cart th {color: white;}
 .cart .checkoutBtn {
-    padding: 4px;
+    padding: 8px;
+    font-size: 20px;    
     background-color: #06a33f;
 }
+
+.cart .checkoutBtn:hover , .addBtn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.cart .btnDelete:hover, .Form .btnDelete  {
+    cursor: pointer;
+    color: black;
+}
+
 .cart .btnDelete {
     padding: 4px;
     background-color: red;
     float: right;
 }
 .cartNumber {
-    color: white;
-    font-size: 0.5em;
-    margin-bottom: 4px;
+    color: white; 
+    font-size: 18px;
+    display: inline-block;
 }
 .Form {
     width: 70vw;
@@ -166,4 +179,41 @@ td button {
     text-align: center;
     color: white;
     font-size: 2em;
+}
+
+.modal-content {
+   text-align: center;
+   position: relative;
+   top: 50px;   
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .product {
+        margin-bottom: 50px;
+    }
+    .list {
+        width: 100%;
+    }
+
+    .list ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .addBtn {
+        padding: 4px;   
+        font-size: 16px;
+    }
+
+    .tabheader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
 }
