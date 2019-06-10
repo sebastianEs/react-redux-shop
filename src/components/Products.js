@@ -3,17 +3,15 @@ import React from 'react';
 function Products(props) {
     let i=0;
     const list = props.products.map( x => <li key={i++}>
-        <div className="product">
-            <img src={x.imgUrl} alt="" />
-            
-            <span className="productName">{x.name}</span>
-            <br />
-            <span className="productPrice">SEK {x.price}</span>
-            <br />
-            <span className="productAmount">{x.amount} cases left in stock</span>
-        </div>
-        <div className="btn">
-            <button onClick={onClick} className="addBtn" id={x.name+x.price} >Add to Cart</button>
+        <div className="card">
+            <div className="card-img-top">
+                <img className="img" src={x.imgUrl} alt="" />
+            </div>
+            <div className="card-body">
+                <span className="card-title">{x.name}: </span>
+                <span className="card-text">{x.price} SEK {x.amount} cases left </span>
+                <button onClick={onClick} className="btn btn-primary" id={x.name+x.price} >Add to Cart</button>
+            </div>
         </div>
     </li>)
     return (

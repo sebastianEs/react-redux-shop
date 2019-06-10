@@ -29,8 +29,8 @@ export default class CartView extends Component {
     render() {
         let i=0;
         let price = 0;
-        const list = this.props.cart.map( x =>  {
-                <tbody key={i++}>
+        const list = this.props.cart.map( x => {
+                return <tbody key={i++}>
                     <tr>    
                         <td>{x.name}</td>
                         <td>{x.price} SEK</td>

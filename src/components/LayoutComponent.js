@@ -51,21 +51,19 @@ class LayoutComponent extends Component {
             num = cartLength + ' cases'
         }
 		return (
-			<div className="App">
-			<div className="tabheader">
-				<span onClick={this.handleClickProducts}>Products</span>
-				<span onClick={this.handleClickCart}>Cart
-                <p className="cartNumber">{num}</p>
-                                                 </span>  
-				<span onClick={this.handleClickForm}>Form</span>
-				<span onClick={this.handleClickHistory}>History</span>
-				
-				
-			</div>
-			<div className="tabbody">     
-                  {view}
-			</div>
-			
+			<div className="container">
+                <div className="navbar navbar-dark bg-primary">
+                <ul className="navbar-nav" >
+                    <li className="nav-item" onClick={this.handleClickProducts}>Products</li>
+                    <li className="nav-item" onClick={this.handleClickCart}>Cart</li>
+                    <li className="nav-item" onClick={this.handleClickForm}>Form</li>
+                    <li className="nav-item" onClick={this.handleClickHistory}>History</li>                          
+                    <p className="cartNumber">{num}</p>
+                    </ul>
+                </div>
+                <div className="tabbody">     
+                    {view}
+                </div>
 		  </div>
 		);
 	}

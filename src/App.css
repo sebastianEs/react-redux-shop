@@ -51,20 +51,12 @@ h2 {
     font-size: 3em;
 }
 
-.product {
-    height: 200px;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-}
-
-.product img {
+.img {
     margin-left: 5px;
+    max-width: 200px;
 }
 
-.product span {
-    font-weight: bold;
-}
+
 span.productName { color: #fff; } 
 span.productPrice, span.productAmount {color: #fff;}
 .productInfo {
@@ -81,9 +73,13 @@ span.productPrice, span.productAmount {color: #fff;}
     padding: 10px;
 }
 
-.list ul {
+.list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.list ul {
+    list-style-type: none;
 }
 
 li {
@@ -93,7 +89,6 @@ li {
     padding: 10px;
     font-size: 14px;
 }
-
 
 .addBtn {
     padding: 8px;
