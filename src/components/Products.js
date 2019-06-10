@@ -2,10 +2,9 @@ import React from 'react';
 
 function Products(props) {
     let i=0;
-    
     const list = props.products.map( x => <li key={i++}>
         <div className="product">
-            <img src={x.imgUrl} alt="image" />
+            <img src={x.imgUrl} alt="" />
             
             <span className="productName">{x.name}</span>
             <br />
@@ -20,7 +19,6 @@ function Products(props) {
     return (
         <div className="list">
            <h2>Products</h2> 
-           <p>High quality cases from big brands like Apple, Samsung and Huawei</p>
            <ul>{list}</ul>
     </div>
                                     

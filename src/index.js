@@ -11,17 +11,17 @@ let initialState = {
     products: [
      {
         name: 'Iphone 6s Case',
-        id: 'Iphone 6s Case150',
-        price: 150,
-        "imgUrl": 'https://d2zmgde9txxwg2.cloudfront.net/media/catalog/product/cache/1/small_image/239x/9df78eab33525d08d6e5fb8d27136e95/i/n/incipio-ngp-iphone-6s-case-black-ab_1.jpg',
-         amount: 8
+        id: 'Iphone 6s Case200',
+        price: 200,
+        imgUrl: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/M/KY/MKY02/MKY02?wid=1144&hei=1144&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=0',
+        amount: 8
     },
      {
-        name: 'Iphone 7s Case',
-        id: 'Iphone 7s Case250',
+        name: 'Iphone X Case',
+        id: 'Iphone X Case250',
         price: 250,
-        imgUrl: 'https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/M/MY/MMY32/MMY32?wid=572&hei=572&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1473023567662',
-        amount: 6
+        imgUrl: 'https://cdn.shopify.com/s/files/1/1384/0075/products/ROKFORM-iX-Speculo-Clear-Image01_1798b645-fe94-4ede-96bb-5c494301a004_2048x.jpg?v=1527266000',
+        amount: 10
     },
      {
         name: 'Huawei Honor 8 case',
@@ -41,15 +41,15 @@ let initialState = {
         name: 'Samsung Galaxy S8 Case',
         id: 'Samsung Galaxy S8 Case190',
         price: 190,
-        imgUrl: 'https://target.scene7.com/is/image/Target/52208712_Alt01?wid=3000&qlt=70&fmt=pjpeg',
+        imgUrl: 'https://incipio.com/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/d/u/dualpro-samsung-galaxy-s8-case-iridescent-black-black_ab.jpg',
         amount: 5
     },
      {
-        name: 'Samsung Galaxy s6 Case',
-        id: 'Samsung Galaxy s6 Case220',
-        price: 220,
-        imgUrl: 'https://d2zmgde9txxwg2.cloudfront.net/media/catalog/product/cache/1/small_image/239x/9df78eab33525d08d6e5fb8d27136e95/i/n/incipio-shock-absorbing-dualpro-samsung-galaxy-s6-edge-case-cyan-gray-r-main_1.jpg',
-        amount: 6
+        name: 'Nokia 5 Case',
+        id: 'Nokia 5 Case150',
+        price: 150,
+        imgUrl: 'https://images.mobilefun.co.uk/graphics/450pixelp/64084.jpg',
+        amount: 5
     }],
     cart: [],
     history: [],

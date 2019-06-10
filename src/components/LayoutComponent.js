@@ -53,12 +53,12 @@ class LayoutComponent extends Component {
 		return (
 			<div className="App">
 			<div className="tabheader">
-				<span onClick={this.handleClickProducts}>-- Products -</span>
-				<span onClick={this.handleClickCart}>- Cart -
+				<span onClick={this.handleClickProducts}>Products</span>
+				<span onClick={this.handleClickCart}>Cart
                 <p className="cartNumber">{num}</p>
                                                  </span>  
-				<span onClick={this.handleClickForm}>- Form -</span>
-				<span onClick={this.handleClickHistory}>- History --</span>
+				<span onClick={this.handleClickForm}>Form</span>
+				<span onClick={this.handleClickHistory}>History</span>
 				
 				
 			</div>
@@ -99,7 +99,7 @@ class LayoutComponent extends Component {
         try {
             this.props.dispatch(actionAddProduct(n,p,a,i))
             this.props.dispatch(actionHistory(actionAddProduct(n,p,a,i)));
-            var inputs ={name: undefined, price: undefined, amount: undefined, imgUrl: undefined}
+            inputs ={name: undefined, price: undefined, amount: undefined, imgUrl: undefined}
         }
         catch(error) {
             console.log('Error!' + error);

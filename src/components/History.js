@@ -3,11 +3,10 @@
 import React from 'react';
 
 function History(props) {
-  console.log('History', props.history);
     const reverse = props.history.reverse();
     const list = reverse.map( (x, index) => <li key={index} id={x.type}>{x.type}</li>);
-    return <div>
-        <h2>History</h2>
+    return <div className="historyContainer" >
+        <h2 className="history-header">History</h2>
         <ul>{list}</ul>
     </div>
 }

@@ -5,23 +5,26 @@
     padding: 0px;
 }
 body {
-     background-color: #626359
+     background-color: #111111
 }
 .tabheader {
+    display: flex;
+    flex-direction: 'row'; 
     height: 65px;
+    width: 50%;
+    margin: 0 auto;
     background-color: #111111;
+    padding-top: 50px;
+    text-transform: uppercase;
 }
 .tabheader span {
     font-size: 1.5em;
-    float: left;
     color: white;
     cursor: pointer;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 0px 10px 0px 10px;
 }
 .tabheader span:hover {
     background-color: #706b6b;
-    height: 50px;
     border-radius: 10px;
 }
 
@@ -59,13 +62,11 @@ h2 {
     position: absolute;
     right: 20vw;
 }
-span.productName {margin-top: 6px;}
-span.productPrice {margin-top: 8px;}
-span.productAmount {margin-top: 8px;}
+span.productName { color: #fff; } 
+span.productPrice, span.productAmount {color: #fff;}
 .productInfo {
     color: white;
-    position: absolute;
-    right: 20vw;
+    
 }
 .list {
     
@@ -79,8 +80,11 @@ ul {
     list-style-type: none;
 }
 li {
-    background-color: #b5b796;
+    background-color: #0f40bd;
     margin-top: 0.5em;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
 }
 
 .addBtn {
@@ -112,7 +116,7 @@ li {
 }
 .cart .btnDelete {
     padding: 4px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.694);
     float: right;
 }
 .cartNumber {
@@ -157,6 +161,7 @@ td, th {
     padding: 6px;
     text-align: center;
     width: 20px;
+    color: white;
 }
 td button {
     float: right;
@@ -166,4 +171,18 @@ td button {
     text-align: center;
     color: white;
     font-size: 2em;
+}
+
+.historyContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.historyContainer ul li {
+    color: white;
+    cursor: pointer;
+}
+
+.history-header {
+    color: #fff;
 }
