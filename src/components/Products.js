@@ -5,7 +5,7 @@ function Products(props) {
     const list = props.products.map( x => <li key={i++}>
         <div className="card">
             <div className="card-img-top">
-                <img className="img" src={x.imgUrl} alt="" />
+                <img className="img" src={x.imgUrl} alt="img" />
             </div>
             <div className="card-body">
                 <span className="card-title">{x.name}: </span>
@@ -17,7 +17,11 @@ function Products(props) {
     return (
         <div className="list">
            <h2>Products</h2> 
-           <ul>{list}</ul>
+           <div className="row">
+               <div className="col-md-auto">
+                    <ul>{list}</ul>
+               </div>
+           </div>
     </div>
                                     
     )

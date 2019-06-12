@@ -52,21 +52,28 @@ class LayoutComponent extends Component {
         }
 		return (
 			<div className="container">
-                <div className="navbar navbar-dark bg-primary">
-                <ul className="navbar-nav" >
-                    <li className="nav-item" onClick={this.handleClickProducts}>Products</li>
-                    <li className="nav-item" onClick={this.handleClickCart}>Cart</li>
-                    <li className="nav-item" onClick={this.handleClickForm}>Form</li>
-                    <li className="nav-item" onClick={this.handleClickHistory}>History</li>                          
-                    <p className="cartNumber">{num}</p>
-                    </ul>
-                </div>
+                <div  className="padding" />
+                <ul className="nav justify-content-center header">
+                    <li className="nav-item" onClick={this.handleClickProducts}>
+                        <a className="nav-link">Products</a>
+                    </li>
+                    <li className="nav-item" onClick={this.handleClickCart}>
+                        <a className="nav-link">Cart</a>
+                    </li>
+                    <li className="nav-item" onClick={this.handleClickForm}>
+                        <a className="nav-link">Form</a>
+                    </li>
+                    <li className="nav-item" onClick={this.handleClickHistory}>
+                        <a className="nav-link" tabindex="-1">History</a>
+                    </li>
+                    {num ? <li><p className="cartNumber">{num}</p></li> : null}
+                </ul>
                 <div className="tabbody">     
                     {view}
                 </div>
 		  </div>
 		);
-	}
+    }
     
     handleOnClick(a) {
         let p = this.props.products;

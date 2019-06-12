@@ -1,192 +1,33 @@
-.App {
-    margin: 0;
-    font-family: monospace, Arial, sans-serif;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-}
-
-.btn {
-    margin-top: 30px;
-}
-body {
-     background-color: #111111
-}
-
-.tabheader {
-    display: flex;
-    flex-direction: 'row'; 
-    height: 65px;
-    width: 50%;
-    margin: 0 auto;
-    background-color: #111111;
-    padding-top: 50px;
-    text-transform: uppercase;
-}
-.tabheader span {
-    font-size: 1.5em;
-    color: white;
-    cursor: pointer;
-    margin: 0px 10px 0px 10px;
-}
-
-.tabheader span:hover {
-    background-color: #706b6b;
-    border-radius: 10px;
-}
-
-.tabbody {
-    flex: 2;
-    padding: 5px;
-    border-radius: 2px;
-    min-height: 100%;
-    
-}
-
-.list h2, .list p {
-    text-align: center;
-    color: white;
-}
-h2 {
-    font-size: 3em;
-}
-
 .img {
-    margin-left: 5px;
-    max-width: 200px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
-
-span.productName { color: #fff; } 
-span.productPrice, span.productAmount {color: #fff;}
-.productInfo {
-    color: white;
-    
-}
-.list, .cart { 
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
-    margin-top: 0.5em;
-    border: 1px solid lightgray;
-    background-color: darkgrey;
-    padding: 10px;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-}
-
-.list ul {
-    list-style-type: none;
+ul {
+    list-style: none;
 }
 
 li {
-    background-color: #0f40bd;
-    margin-top: 0.5em;
-    border-radius: 15px;
-    padding: 10px;
-    font-size: 14px;
-}
-
-.addBtn {
-    padding: 8px;
-    font-size: 20px;    
-    background-color: #06a33f;
-}
-
-.cart h2, .cart h4 {
-    color: white;
-    font-size: 1em;
-    text-align: center;
-}
-.cart th {color: white;}
-.cart .checkoutBtn {
-    padding: 8px;
-    font-size: 20px;    
-    background-color: #06a33f;
-}
-
-.cart .checkoutBtn:hover , .addBtn:hover {
-    cursor: pointer;
-    color: white;
-}
-
-.cart .btnDelete:hover, .Form .btnDelete  {
-    cursor: pointer;
-    color: black;
-}
-
-.cart .btnDelete {
-    padding: 4px;
-    background-color: rgba(255, 0, 0, 0.694);
-    float: right;
-}
-.cartNumber {
-    color: white; 
-    font-size: 18px;
-    display: inline-block;
-}
-.Form {
-    width: 70vw;
-    height: 70vh;
-    margin: auto;
-    border: 1px solid lightgray;
-    margin-top: 10px;
-}
-.Form h4 {
-    color: white;
-    font-size: 1.5em;
-    text-align: center;
-}
-.Form .btnDelete {
-    background-color: red;
-}
-.Form input {
-    padding: 6px;
-    text-align: center;
-    margin-left: 4px;
-    
-}
-.Form button {
-    padding: 6px;
-    background-color: #06a33f;
-    margin-left: 4px;
-    color: white;
-    
-}
-table {
-    border: 1px solid white;
-    width: 100%;
-    border-spacing: 0;    
-}
-td, th {
-    padding: 6px;
-    text-align: center;
-    width: 20px;
-    color: white;
-}
-td button {
-    float: right;
-    padding: 4px;
-}
-.Form h2 {
-    text-align: center;
-    color: white;
-    font-size: 2em;
-}
-
-.historyContainer {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.historyContainer ul li {
-    color: white;
     cursor: pointer;
 }
 
-.history-header {
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
+}
+
+.padding {
+    padding: 50px 0px 50px 0px;
+}
+
+.header li a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.header li:hover, .header li:active {
+    background-color: darkblue;
     color: #fff;
 }
+

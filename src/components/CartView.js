@@ -5,7 +5,7 @@ export default class CartView extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible : false
+            visible: false
         }
     }
 
@@ -23,6 +23,7 @@ export default class CartView extends Component {
 
     onClick(e) {
         let x = e.target.id
+        console.log('remove item ?', x);
         this.props.handleClickRemoveCart(x);
     }
     
@@ -35,7 +36,7 @@ export default class CartView extends Component {
                         <td>{x.name}</td>
                         <td>{x.price} SEK</td>
                         <td>{x.amount}</td>
-                        <td><button onClick={this.props.onClick} className="btnDelete" id={x.name + x.price}>X</button></td>
+                        <td onClick={(e) => this.onClick(e)} className="btn btn-danger" id={x.name + x.price}>X</td>
                     </tr>
                 </tbody>
             }
@@ -58,23 +59,22 @@ export default class CartView extends Component {
                     </thead>
                     {list}
                 </table>
-                <br />
-                <input type="button" value="Checkout" className="checkoutBtn"  onClick={() => this.openModal()} />
-                   <Modal 
-                       visible={this.state.visible}
-                       width="400"
-                       height="300"
-                       effect="fadeInUp"
-                       onClickAway={() => this.closeModal()}
-                   >
-                       <div className="modal">
-                            <div className="modal-content">
-                                <h1>Purchase Complete</h1>
-                                <a href="javascript:void(0);" onClick={() => this.closeModal()}>Done</a>
-
-                            </div>
-                       </div>
-                   </Modal>
+                <section>
+                <input type="button" value="Open" className="btn btn-success" onClick={() => this.openModal()} />
+                <Modal 
+                    visible={this.state.visible}
+                    width="400"
+                    height="300"
+                    effect="fadeInUp"
+                    onClickAway={() => this.closeModal()}
+                >
+                    <div>
+                        <h1>Title</h1>
+                        <p>Some Contents</p>
+                        <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+                    </div>
+                </Modal>
+            </section>
             </div>
        )
     }
